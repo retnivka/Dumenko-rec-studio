@@ -1,0 +1,597 @@
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+@font-face {
+    font-family: "CraftworkGrotesk-Regular";
+    font-style: normal;
+    font-weight: 400;
+    src: url("fonts/CraftworkGrotesk-Regular.ttf");
+  }
+  @font-face {
+    font-family: "CraftworkGrotesk-Medium";
+    font-style: normal;
+    font-weight: medium;
+    src: url("fonts/CraftworkGrotesk-Medium.ttf");
+  }
+  @font-face {
+    font-family: "CraftworkGrotesk-SemiBold";
+    font-style: normal;
+    font-weight: 600;
+    src: url("fonts/CraftworkGrotesk-SemiBold.ttf");
+  }
+@font-face {
+    font-family: "CraftworkGrotesk-Bold";
+    font-style: normal;
+    font-weight: bold;
+    src: url("fonts/CraftworkGrotesk-Bold.ttf");
+  }
+  
+
+html{
+    scroll-behavior: smooth;
+    font-family: "CraftworkGrotesk-Regular";
+    font-size: 16px;
+    color: white;
+
+    width: 100%;
+
+    overflow-x: hidden;
+}
+body{
+    background-color: #121212;
+
+    overflow-x: hidden;
+    width: 100%;
+    -webkit-box-sizing: border-box;
+       -moz-box-sizing: border-box;
+            box-sizing: border-box;
+   
+}
+body::-webkit-scrollbar {
+    display: none;
+  }
+  
+.wrapper{
+    max-width: 1440px;
+    margin: 3rem auto;
+    padding: 0 2rem;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 2rem;
+}
+
+#logo {
+    height: 4.5rem;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    border: 1px solid white;
+    background-color: rgba(83, 84, 86, .5);
+    backdrop-filter: blur(2px);
+    border-radius: 1.5rem;
+    width: 700px;
+    padding: 1rem 1rem;
+}
+
+nav .nav-point {
+    white-space: nowrap;
+    font-size: 1rem;
+    text-decoration: none;
+    padding: 0;
+    text-decoration: none;
+    color: inherit;
+    position: relative;
+    transition: color 0.3s;
+}
+
+nav .nav-point:hover {
+    color: #EE3F32; /* Измените цвет при наведении на ссылку */
+}
+
+nav .nav-point::before {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 2px;
+    background-color: #EE3F32; /* Цвет подчеркивания */
+    visibility: hidden;
+    transform: scaleX(0);
+    transition: all 0.3s ease-in-out;
+    margin-bottom: -5px;
+}
+
+nav .nav-point:hover::before {
+    visibility: visible;
+    transform: scaleX(1);
+}
+
+#waves{
+    width: 100%;
+    scale: 130%;
+    top: 60%;
+    left: -5%;
+    position: absolute;
+    margin: 0 auto;
+    z-index: -1;
+}
+
+.main-logo-content{
+    display: flex;
+    justify-content: space-between;
+    align-items: center; 
+    margin: 18rem 0 40rem 0; 
+}
+
+
+#main-label{
+    width: 65%;
+    margin-right: 1rem;
+}
+.send-app-btn{
+    border: 1px solid white;
+    background-color: rgba(83, 84, 86, .5);
+    backdrop-filter: blur(2px);
+    color: white;
+    border-radius: 30px;
+    text-align: center;
+    padding: 1rem 2rem;
+    font-size: 1.5rem;
+    font-weight: bold;
+    white-space: nowrap;
+}
+
+
+.service{
+    margin-top: 2rem;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+#serviceh1{
+    margin-top: 8rem;
+    color: #EE3F32;
+    font-family: "CraftworkGrotesk-Semibold";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 3rem;
+}
+.service-products{
+    display: flex;
+    gap: 2rem;
+    margin-top: 2rem;
+}
+.product{
+    position: relative;
+    text-align: center;
+    width: fit-content;
+}
+.product img{
+    width:100%;
+}
+
+.product-title{
+    position: absolute;
+    font-size: 1rem;
+    font-weight: bold;
+}
+
+.product-price{
+    position: absolute;
+    font-size: 5rem;
+    font-weight: medium;
+}
+
+#second-line{
+margin-left: auto;
+}
+
+#one{
+    top: 1rem;
+    right: 1rem;
+}
+
+#two{
+    position: absolute;
+    bottom: 1rem;
+    right: 1rem;
+}
+#one1{
+    top: 1rem;
+    right: 4rem;
+}
+#two1{
+    position: absolute;
+    bottom: 1rem;
+    right: 4rem;
+}
+
+#three{
+    top: 1rem;
+    left: 4rem;
+}
+
+#four{
+    position: absolute;
+    bottom: 1rem;
+    left: 4rem;
+}
+
+
+#five{
+    top: 1rem;
+    left: 1rem;
+}
+
+#six{
+    position: absolute;
+    bottom: 1rem;
+    left: 1rem;
+}
+
+
+
+.phone-number-block {
+    display: flex;
+    justify-content: space-between;
+    gap: 2rem;
+    width: 80%;
+    max-width: 1440px;
+    margin: 8rem auto 0 auto;
+    padding: 0 2rem;
+}
+
+.phone-number-block input {
+    background-color: rgba(192, 192, 192, .1);
+    border: 1px solid white;
+    border-radius: 2rem;
+    width: 100%;
+    color: aliceblue;
+    font-size: 1rem;
+    padding-left: 20px;
+    font-weight: medium;
+
+}
+
+.phone-number-block button{
+    background-color: rgba(83, 84, 86, .5);
+    backdrop-filter: blur(2px);
+    font-size: 1rem;
+    font-weight: bold;
+}
+
+
+.team{
+    margin-top: 15%;
+}
+
+h1{
+    margin: 3rem 0;
+    color: #EE3F32;
+    font-family: "CraftworkGrotesk-Semibold";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 3rem;
+}
+
+.slider::before,
+.slider::after {
+  background: linear-gradient(to right, rgb(15, 15, 15) 0%, rgba(255, 255, 255, 0) 100%);
+  content: "";
+  height: 500px;
+  position: absolute;
+  width: 500px;
+  z-index: 2;
+}
+
+.slider::after {
+  right: 0;
+  top: 0;
+  transform: rotateZ(180deg);
+}
+
+.slider::before {
+  left: 0;
+  top: 0;
+}
+
+.slider {
+  box-shadow: 0 10px 20px -5px rgba(0, 0, 0, 0.125);
+  height: 500px;
+  margin: auto;
+  overflow: hidden;
+  position: relative;
+  max-width: 1440px;
+}
+
+.slider .slide-track {
+  animation: scroll 40s linear infinite;
+  display: flex;
+  width: calc(250px * 14);
+}
+
+.slider .slide {
+  height: 500px;
+  width: 500px;
+}
+
+@keyframes scroll {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(calc(-250px * 7));
+  }
+}
+
+
+
+.about {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    margin-top: 8rem;
+}
+
+.about-block {
+    display: flex;
+    gap: 2rem;
+    margin: 2rem auto;
+
+}
+
+.about-block img {
+    width: 100%;
+
+}
+
+.about-block p {
+    font-size: 2rem;
+    font-weight: 400;
+
+}
+
+
+.about button {
+    width: 100%;
+
+}
+
+
+
+footer{
+    display: flex;
+    justify-content: space-between;
+    margin: 8rem 0;
+}
+
+.contact{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    font-size: 1.5rem;
+    font-weight: 400;
+    margin-right: 8rem;
+}
+.links a img {
+    width: 52px;
+}
+.map{
+    width: 100%;
+}
+iframe{
+    width: 100%;
+}
+
+
+.modal{
+    position: fixed;
+    background-color: #121212;
+    border-radius: 1rem;
+    display: flex;
+    flex-direction: column;
+    display: none;
+
+    gap: 2rem;
+
+    width: 50%;
+    height: 50%;
+    transition: 1s;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 4rem;
+}
+.modal-h{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.modal-h h1{
+    color: #EE3F32;
+    font-family: "CraftworkGrotesk-Semibold";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 2rem;
+}
+.modal-h p{
+    color: #fff;
+    font-family: "CraftworkGrotesk-Semibold";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 1.5rem;
+}
+
+.data {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    margin-top: 2rem;
+}
+
+.data input {
+    background-color: rgba(192, 192, 192, .1);
+    border: 1px solid white;
+    border-radius: 2rem;
+    width: 80%;
+    color: aliceblue;
+    font-size: 1rem;
+    padding-left: 20px;
+    font-weight: medium;
+    font-size: 2rem;
+}
+.close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+    cursor: pointer;
+    margin-left: auto;
+}
+
+.close:hover,
+.close:focus {
+    color: #EE3F32;
+}
+
+
+
+@media (max-width: 768px)  {
+    header{
+        flex-direction: column;
+        justify-content: center;
+        gap:0px;
+    }
+    nav{
+        display: flex;
+        width: 100%; 
+        margin-top: 3rem;
+    }
+    #waves{
+        margin-top: 0rem;
+    }
+    .about-block p {
+        display: none;
+    }
+    .product-price{
+        font-size: 3rem;
+
+    }
+    .service-products{
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    footer{
+        flex-direction: column-reverse;
+    }
+    .slider::before,
+.slider::after {
+  background: none;
+
+}
+.main-logo-content{
+    margin: 10rem 0 20rem 0; 
+}
+.send-app-btn{
+    padding: 0.5rem 1rem;
+}
+.contact{
+    gap: 2rem;
+}
+.links a img{
+    width: 52px
+}
+}
+@media (max-width: 375px)  {
+    html{
+        font-size: 14px ;
+    }
+    .slider{
+        scale: 0.8;
+        margin: 0 -8rem ;
+    }
+}
+@media (max-width: 320px)  {
+    html{
+        font-size: 12px ;
+    }
+    .slider{
+        scale: 0.6;
+        margin: 0 -11rem ;
+    }
+}
+
+
+@media (max-width: 600px)  {
+    .main-logo-content{
+        flex-direction: column;
+        align-items: start;
+        margin-top: 5rem; 
+    }
+    #main-label{
+        width: 100%;
+    }
+    .send-app-btn{
+        margin-top: 1rem;
+    }
+}
+
+
+
+
+
+
+
+
+
